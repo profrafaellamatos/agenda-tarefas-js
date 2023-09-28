@@ -23,7 +23,7 @@ jobs:
                 node-version: 18.x
             
             - name: Install dependencies
-              run: npm install
+              run: npm install jest
             
             - name: Run Unit Tests
               run: npm run test
