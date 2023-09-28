@@ -15,17 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do Projeto
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js Environment
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14.x # Certifique-se de que esta versão seja adequada para o seu projeto
-
-      - name: Install Dependencies
-        run: npm install # Isso instalará todas as dependências listadas em package.json
-
-      - name: Run Unit Tests
-        run: npm run test # Ajuste isso para corresponder ao comando de teste do seu projeto
+        - name: Checkout do Projeto
+          uses: actions/checkout@v2.4.2 # Use uma versão compatível com o Node.js 16
+      
+        - name: Setup Node.js Environment
+          uses: actions/setup-node@v2.4.1 # Use uma versão compatível com o Node.js 16
+          with:
+            node-version: 18 # Especifique o Node.js 18 aqui
 
