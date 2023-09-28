@@ -1,0 +1,25 @@
+name: Execução de Testes de Regressão
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '0 9,11,15,18 * * 1,2,3,4,5'
+
+jobs:
+  testes-e2e:
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Checkout do Projeto
+          uses: actions/checkout@v2.4.2 # Use uma versão compatível com o Node.js 16
+      
+        - name: Setup Node.js Environment
+          uses: actions/setup-node@v2.4.1 # Use uma versão compatível com o Node.js 16
+          with:
+            node-version: 18 # Especifique o Node.js 18 aqui
+
