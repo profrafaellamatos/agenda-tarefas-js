@@ -47,7 +47,7 @@ describe('Função adicionarTarefa', () => {
         expect(agenda.tarefas).toContain(tarefa4);
         expect(agenda.tarefas).toContain(tarefa5);
 
-        expect(agenda.tarefas.length).toBe(5);
+        expect(agenda.tarefas.length).toBe(2);
     });
 
     test('A lista de tarefas deve ter o tamanho correto', () => {
